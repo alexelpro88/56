@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .calculator-container {
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .calculator-container img {
+            width: 300px; /* Tamaño de la imagen */
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Calculadora de IMC</h2>
+        <img src="img2.jpg" alt="Mascota">
+        <form id="bmiCalculatorForm">
+            <label for="height">Altura (cm):</label>
+            <input type="text" id="height" name="height" required>
+            <label for="weight">Peso (kg):</label>
+            <input type="text" id="weight" name="weight" required>
+            <input type="submit" value="Calcular">
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("bmiCalculatorForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var height = parseInt(document.getElementById("height").value);
+            var weight = parseInt(document.getElementById("weight").value);
+            var bmi = calculateBMI(height, weight);
+            document.getElementById("result").innerHTML = "Tu índice de masa corporal (IMC) es: " + bmi.toFixed(2);
+        });
+
+        function calculateBMI(height, weight) {
+            // Convertir altura de cm a metros
+            var heightInMeters = height / 100;
+            // Calcular IMC
+            var bmi = weight / (heightInMeters * heightInMeters);
+            return bmi;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Edad de Mascotas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Calculadora de Edad de Mascotas</h2>
+        <img src="img1.jpg" alt="Mascota" style="border-radius: 10px; margin-bottom: 15px;">
+        <form id="ageCalculatorForm">
+            <label for="petAge">Edad de tu mascota en años:</label>
+            <input type="text" id="petAge" name="petAge" required>
+            <input type="submit" value="Calcular">
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("ageCalculatorForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var petAge = parseInt(document.getElementById("petAge").value);
+            var humanAge = petAge * 7;
+            document.getElementById("result").innerHTML = "La edad de tu mascota en años humanos es: " + humanAge;
+        });
+    </script>
+</body>
+</html>

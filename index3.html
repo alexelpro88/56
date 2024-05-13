@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-bar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .menu-bar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .menu-bar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .menu-bar .menu-icon {
+            display: none;
+        }
+        @media screen and (max-width: 600px) {
+            .menu-bar a:not(:first-child) {display: none;}
+            .menu-bar a.menu-icon {
+                float: right;
+                display: block;
+            }
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-bar">
+    <a href="#" class="menu-icon">&#9776;</a>
+    <a href="#">Inicio</a>
+    <a href="#">Sobre Nosotros</a>
+    <a href="#">Contacto</a>
+    <a href="index.html">Edad de tu mascota</a>
+    <a href="index1.html">IMC</a>
+    <a href="index2.html">Iniciar Secion</a>
+</div>
+
+<div class="content">
+    <h1>Mascotas </h1>
+    <p>
+        La importancia de la edad de tu mascota radica en varios aspectos importantes para su salud y bienestar:
+        
+        Cuidados Veterinarios: La edad de tu mascota influye en el tipo de cuidados veterinarios que necesita. Los cachorros y gatitos necesitan vacunas y controles regulares para asegurar su desarrollo adecuado, mientras que los animales mayores pueden requerir atención especial para condiciones crónicas relacionadas con la edad, como artritis, problemas de visión o pérdida de la audición.
+        
+        Nutrición: La edad de tu mascota también afecta sus necesidades nutricionales. Los cachorros y gatitos necesitan dietas ricas en proteínas y calorías para apoyar su rápido crecimiento, mientras que los animales mayores pueden necesitar alimentos con menos calorías pero con ingredientes que apoyen la salud de sus articulaciones y órganos.
+        
+        Ejercicio y Actividad: La edad de tu mascota puede influir en su nivel de actividad. Los cachorros y gatitos suelen ser más activos y necesitan más ejercicio y estimulación mental, mientras que los animales mayores pueden preferir actividades más tranquilas y descanso adecuado.
+        
+        Entrenamiento y Socialización: La edad también afecta la capacidad de tu mascota para aprender y adaptarse. Los cachorros y gatitos son más receptivos al entrenamiento y a la socialización temprana, mientras que los animales mayores pueden requerir métodos de entrenamiento adaptados a sus capacidades físicas y cognitivas.
+        
+        Detección Temprana de Problemas de Salud: Conocer la edad de tu mascota te permite estar alerta a problemas de salud específicos que son más comunes en ciertas etapas de la vida. Esto incluye enfermedades relacionadas con la vejez, así como problemas de salud más comunes en cachorros y gatitos.</p>
+
+        <h1>IMC</h1>
+        <p>El índice de masa corporal (IMC) es una medida que relaciona el peso y la altura de una persona. Controlar el IMC es importante por varias razones:
+
+            Salud General: El IMC es un indicador útil de la salud general de una persona. Un IMC bajo puede indicar desnutrición o problemas de salud subyacentes, mientras que un IMC alto puede indicar sobrepeso u obesidad, lo que puede aumentar el riesgo de desarrollar enfermedades crónicas como diabetes tipo 2, enfermedades cardíacas, hipertensión arterial y ciertos tipos de cáncer.
+            
+            Gestión del Peso: Mantener un IMC dentro del rango saludable es fundamental para la gestión del peso. Controlar el IMC puede ayudar a las personas a establecer metas realistas de pérdida o mantenimiento de peso, así como a evaluar la efectividad de sus esfuerzos en la dieta y el ejercicio.
+            
+            Riesgo de Enfermedades Crónicas: Un IMC elevado está asociado con un mayor riesgo de desarrollar una serie de enfermedades crónicas. Controlar y mantener un IMC saludable puede ayudar a reducir este riesgo y promover una vida más larga y saludable.
+            
+            Bienestar Mental: Mantener un IMC saludable también puede tener beneficios para el bienestar mental. Sentirse bien físicamente puede aumentar la confianza en uno mismo y mejorar la calidad de vida en general.
+            
+            Prevención y Tratamiento: Controlar el IMC puede ayudar en la prevención y tratamiento de enfermedades relacionadas con el peso. Identificar un IMC alto temprano puede permitir intervenciones preventivas, como cambios en la dieta y el ejercicio, antes de que se desarrollen problemas de salud más graves.
+            
+            En resumen, controlar el IMC es una herramienta importante para evaluar la salud general, gestionar el peso, reducir el riesgo de enfermedades crónicas y promover un estilo de vida saludable y activo. Es fundamental para el bienestar físico y mental a largo plazo.</p>
+</div>
+
+<script>
+    document.querySelector('.menu-icon').addEventListener('click', function() {
+        var menuItems = document.querySelectorAll('.menu-bar a');
+        menuItems.forEach(function(item) {
+            item.style.display = (item.style.display === 'block' ? 'none' : 'block');
+        });
+    });
+</script>
+
+</body>
+</html>
